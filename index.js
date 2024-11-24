@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
-const trackingRoutes = require("./models/order");
+const trackingRoutes = require("./routes/tracking");
 
 dotenv.config();
 
