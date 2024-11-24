@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Order = require("../models/Order");
+const Order = require("../models/order");
 
 // Retrieve tracking details by phone number
 router.post("/get-tracking", async (req, res) => {
