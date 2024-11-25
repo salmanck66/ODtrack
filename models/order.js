@@ -1,11 +1,8 @@
-const mongoose = require('mongoose');
-
 const orderSchema = new mongoose.Schema({
-  customerName: { type: String, required: true },
-  awbNumber: { type: String, required: true },
-  phoneNumber: { type: String, required: true },
-  orderDate: { type: Date, default: Date.now },
+  consignee_phone: { type: String, required: true },
+  awb_number: { type: String, required: true },
+  product_detail: { type: Array, required: true },
+  consignee_name: { type: String, required: true },
+  courier_service: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now },
 });
-
-const Order = mongoose.model("Order", orderSchema);
-module.exports = Order;
