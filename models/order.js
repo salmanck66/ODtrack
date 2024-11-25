@@ -6,3 +6,5 @@ const orderSchema = new mongoose.Schema({
   courier_service: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
 });
+
+module.exports = mongoose.model("Order", orderSchema);
