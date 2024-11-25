@@ -3,10 +3,12 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const trackingRoutes = require("./routes/tracking");
+const cors = require('cors')
 
 dotenv.config();
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3002;
 
 // Middleware
