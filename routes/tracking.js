@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const Order = require("../models/order");
+const axios = require("axios");
 
 const SHIPPING_API_BASE_URL = "https://shipping-api.com/app/api/v1/track-order";
 const PUBLIC_KEY = process.env.PUBLIC_KEY;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
+
 // Retrieve tracking details by phone number
 router.post("/get-tracking", async (req, res) => {
   const { consignee_phone } = req.body;
@@ -131,6 +133,5 @@ router.post("/delete-tracking", async (req, res) => {
     res.status(500).json({ message: "Error deleting tracking details" });
   }
 });
-
 
 module.exports = router;
